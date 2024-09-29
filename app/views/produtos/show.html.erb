@@ -1,47 +1,56 @@
-<p style="color: green"><%= notice %></p>
+<p class="notice"><%= notice %></p>
 
 <%= render @produto %>
 
-<div>
-  <%= link_to "Edit this produto", edit_produto_path(@produto) %> |
-  <%= link_to "Back to produtos", produtos_path %>
-
-  <%= button_to "Destroy this produto", @produto, method: :delete %>
+<div class="produto-actions">
+  <%= link_to "Editar Produto", edit_produto_path(@produto), class: "action-link" %>
+  <%= link_to "Voltar para Produtos", produtos_path, class: "action-link" %>
+  <%= button_to "Deletar Produto", @produto, method: :delete, class: "delete-button" %>
 </div>
+
 <style>
   body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    background-color: #e3f2fd; /* Azul claro para o fundo */
+    padding: 20px;
   }
 
   .notice {
-    color: green;
+    color: #0d47a1; /* Azul escuro */
     font-weight: bold;
+    background-color: #bbdefb; /* Azul claro */
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
   }
 
+  /* Estilo das ações do produto */
   .produto-actions {
     margin-top: 20px;
+    display: flex;
+    gap: 15px;
   }
 
-  .produto-actions a, .produto-actions button {
-    background-color: #4CAF50;
+  .action-link, .delete-button {
+    background-color: #1976d2; /* Azul médio */
     color: white;
     padding: 10px 20px;
     text-decoration: none;
     border: none;
     border-radius: 5px;
-    margin-right: 10px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
   }
 
-  .produto-actions a:hover, .produto-actions button:hover {
-    background-color: #45a049;
+  .action-link:hover, .delete-button:hover {
+    background-color: #1565c0; /* Azul mais escuro no hover */
+  }
+
+  .delete-button {
+    background-color: #1e88e5; /* Azul claro para o botão de deletar */
+  }
+
+  .delete-button:hover {
+    background-color: #1565c0; /* Azul mais escuro no hover do botão de deletar */
   }
 </style>
-
-<p class="notice"><%= notice %></p>
-
-<div class="produto-actions">
-  <%= link_to "Edit this produto", edit_produto_path(@produto) %> |
-  <%= link_to "Back to produtos", produtos_path %>
-  <%= button_to "Destroy this produto", @produto, method: :delete %>
-</div>
