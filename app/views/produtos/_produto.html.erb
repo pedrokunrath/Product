@@ -1,0 +1,25 @@
+<div id="<%= dom_id produto %>">
+  <p>
+    <strong>Name:</strong>
+    <%= produto.name %>
+  </p>
+
+</div>
+<style>
+  #<%= dom_id produto %> {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+
+  #<%= dom_id produto %> p {
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+
+  #<%= dom_id produto %> strong {
+    color: #555;
+  }
+</style>

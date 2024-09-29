@@ -1,0 +1,56 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Produtos" %>
+
+<h1>Produtos</h1>
+
+<div id="produtos">
+  <% @produtos.each do |produto| %>
+    <%= render produto %>
+    <p>
+      <%= link_to "Show this produto", produto %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New produto", new_produto_path %>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+
+  #produtos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  #produtos > div {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: calc(33.333% - 20px);
+    box-sizing: border-box;
+  }
+
+  h1 {
+    color: #007BFF;
+  }
+
+  a {
+    color: #007BFF;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  p {
+    margin: 0;
+  }
+</style>

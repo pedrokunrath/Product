@@ -1,0 +1,47 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @produto %>
+
+<div>
+  <%= link_to "Edit this produto", edit_produto_path(@produto) %> |
+  <%= link_to "Back to produtos", produtos_path %>
+
+  <%= button_to "Destroy this produto", @produto, method: :delete %>
+</div>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+  }
+
+  .notice {
+    color: green;
+    font-weight: bold;
+  }
+
+  .produto-actions {
+    margin-top: 20px;
+  }
+
+  .produto-actions a, .produto-actions button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+  .produto-actions a:hover, .produto-actions button:hover {
+    background-color: #45a049;
+  }
+</style>
+
+<p class="notice"><%= notice %></p>
+
+<div class="produto-actions">
+  <%= link_to "Edit this produto", edit_produto_path(@produto) %> |
+  <%= link_to "Back to produtos", produtos_path %>
+  <%= button_to "Destroy this produto", @produto, method: :delete %>
+</div>

@@ -1,0 +1,65 @@
+<% content_for :title, "Novo Produto" %>
+
+<div class="produto-container">
+  <h1>Cadastrar Novo Produto</h1>
+
+  <div class="produto-form">
+    <%= render "form", produto: @produto %>
+  </div>
+
+  <div class="back-link">
+    <%= link_to "Voltar para Produtos", produtos_path %>
+  </div>
+</div>
+
+<style>
+  /* Estilos gerais */
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f8ff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .produto-container {
+    background-color: #e3f2fd;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+  }
+
+  /* Estilo do título */
+  h1 {
+    color: #0d47a1;
+    margin-bottom: 30px;
+    font-size: 24px;
+    letter-spacing: 1px;
+  }
+
+  /* Estilo do formulário */
+  .produto-form {
+    margin-bottom: 20px;
+  }
+
+  /* Estilo do link de voltar */
+  .back-link a {
+    color: #1565c0;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid #1565c0;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .back-link a:hover {
+    background-color: #1565c0;
+    color: white;
+  }
+</style>
